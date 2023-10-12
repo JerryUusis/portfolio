@@ -163,3 +163,59 @@ section.about-section {
         background-position: right;
     }
 }
+
+/* Form section */
+
+section.form-section {
+    background-color: var(--dark-blue);
+}
+
+.form-section h2 {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+section.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+}
+
+form {
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.label-container {
+    margin: 1.5rem;
+    vertical-align: center;
+}
+
+label {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    display: inline-block;
+    font-size: 1.125rem;
+    width: 150px;
+}
+
+label + textarea {
+    display: inline-block;
+    vertical-align: top;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    width: 300px;
+}
+
+button.submit-button {
+    font-family: inherit;
+    padding: 0.5rem;
+    align-self: center;
+    margin: 1.5rem 0;
+}
