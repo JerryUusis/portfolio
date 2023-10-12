@@ -128,13 +128,38 @@ section.projects-section {
     background: #FFF;
 }
 
-.project-text-container {
+.section-text-container {
     font-family: 'Roboto Mono', monospace;
     color: white;
-    padding: 3rem 0;
+    padding: 2rem 0;
     width: 85%;
 }
 
-.project-text-container h3 {
+.section-text-container h3 {
     padding: 2rem 0;
+}
+
+/* About me section */
+
+section.about-section {
+    background: linear-gradient(24deg, 
+    rgba(151,71,255,1) 0%, 
+    rgb(244, 98, 244) 33%, 
+    rgba(230,71,255,1) 66%, 
+    rgba(0,212,255,1) 100%);
+    background-size: 600%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: background-animation 10s infinite alternate ease-in-out;
+}
+
+@keyframes background-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
 }
