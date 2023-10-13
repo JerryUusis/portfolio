@@ -1,6 +1,11 @@
 :root {
     --jet-color: #333;
-    --dark-blue: #003f6f;
+    --indigo-dye: #003f6f;
+    --mauve: #E2BBF2;
+    --lavender: #7B77D8;
+    --rosewood: #6E1717;
+    --cool-gray: #7b80a6;
+    --celeste: #B1F7FF;
 }
 
 /* font-family: 'Roboto Mono', monospace; */
@@ -24,10 +29,33 @@
     text-align: center;
     font-family: "VCR", sans-serif;
     text-shadow: 
-    -2px -2px 1px #00FF47, 
-    2px 2px 1px #F00, 
-    0px 0px 3px rgba(0, 0, 0, 1);
+        0.10em 0 0 rgba(0, 255, 0, 0.6), 
+        -0.15em -0.05em 0 rgba(255, 0, 0, 0.6), 
+        0 0 1em rgba(0, 0, 0, 1);
     letter-spacing: 3px;
+}
+
+@keyframes glitch-animation {
+    0% {
+        text-shadow: 
+        0.01em -0.0em 0 rgba(0, 255, 0, 0.6), 
+        -0.002em -0.025em 0 rgba(255, 0, 0, 0.6) 
+    }
+    15% {
+        text-shadow: 
+        0.015em -0.005em 0.01em rgba(0, 255, 0, 0.6), 
+        -0.03em 0.01em 0.01em rgba(255, 0, 0, 0.6) 
+    }
+    60% {
+        text-shadow: 
+        0.03em -0.001em 0 rgba(0, 255, 0, 0.6), 
+        0 -0.03em 0 rgba(255, 0, 0, 0.6) 
+    }
+    100% {
+        text-shadow: 
+        0.01em -0.011em 0 rgba(0, 255, 0, 0.6), 
+        0em -0.025em 0.15em rgba(255, 0, 0, 0.6) 
+    }
 }
 
 /* Nav bar */
@@ -54,16 +82,28 @@ li {
 
 /* Hero */
 
+/* svg is used to create glitchy effect on the page */
+
+svg {
+    height: 0;
+}
+
 section.hero-section {
+    position: relative;
     background: no-repeat url(resources/img/8bit_helsinki_tuomiokirkko.jpeg)
     center/cover;
 }
 
 .noise-filter {
-    border: 1px solid #000;
-    opacity: 1;
-    background: url(resources/img/noise.gif), lightgray 50% / cover no-repeat;
-    filter: blur(7.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    background: url(resources/img/noise.gif);
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 10;
 }
 
 .hero-section .text-container {
@@ -74,15 +114,46 @@ section.hero-section {
     text-align: center;
     font-family: "VCR", sans-serif;
     text-transform: uppercase;
-    color: #fff;
+    color: white;
     padding: 8rem 1rem;
+    filter: url(#wavy) drop-shadow(0 0 1em black);
+
 }
 
 .hero-section h1 {
+    position: relative;
     margin-bottom: 2rem;
-    font-size: 3.5rem;
-
+    font-size: 5rem;
 }
+
+.hero-section h2 {
+    position: relative;
+    animation: glitch-animation 300ms infinite ease-in-out;
+}
+
+h1 > span,
+h2 > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 span:first-child,
+h2 span:first-child {
+    animation: glitch-animation 500ms infinite linear;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.03em, 0.03em);
+    opacity: 0.4;
+}
+
+h1 span:last-child,
+h2 span:last-child {
+    animation: glitch-animation 700ms infinite alternate;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+    transform: translate(-0.03em, -0.03em);
+    opacity: 0.4;
+}
+
 .hero-section h2 {
     font-size: 3rem;
 }
@@ -90,7 +161,7 @@ section.hero-section {
 /* Projects section */
 
 section.projects-section {
-    background: var(--dark-blue);
+    background: var(--indigo-dye);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,7 +238,7 @@ section.about-section {
 /* Form section */
 
 section.form-section {
-    background-color: var(--dark-blue);
+    background-color: var(--indigo-dye);
 }
 
 .form-section h2 {

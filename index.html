@@ -20,14 +20,27 @@
         </nav>
     </header>
 
-    <section class="hero-section glitch-style">
-        <div class="text-container">
-            <h1>Yo I'm Jerry!</h1>
-            <h2>Welcome to my portfolio</h2>
-        </div>
-        <div class="noise-filter">
-        </div>
-    </section>
+
+        <section class="hero-section glitch-style">
+            <div class="noise-filter"></div>
+            <div class="text-container">
+                <svg>
+                    <filter id="wavy">
+                        <feTurbulence type="turbulence" baseFrequency="0.003" numOctaves ="10">
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" scale="7"></feDisplacementMap>
+                    </filter>
+                </svg>
+                <h1>Yo I'm Jerry!
+                    <span aria-hidden="true">Yo I'm Jerry!</span>
+                    <span aria-hidden="true">Yo I'm Jerry!</span>
+                </h1>
+                <h2>Welcome to my portfolio
+                    <span aria-hidden="true">Welcome to my portfolio</span>
+                    <span aria-hidden="true">Welcome to my portfolio</span>
+                </h2>
+            </div>
+        </section>
 
     <section class="projects-section projects-text-sectiio">
         <h2 class="glitch-style">Projects</h2>
