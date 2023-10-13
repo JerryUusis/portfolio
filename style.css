@@ -179,6 +179,7 @@ section.projects-section {
 
 .project-card h3 {
     display: flex;
+    border-top: black solid 5px;
     background-color: #999;
     justify-content: center;
     width: 100%;
@@ -203,6 +204,16 @@ section.projects-section {
 
 .project-card.inactive {
     opacity: 0.5;
+}
+
+/* Project thumbnails */
+
+#pokedex {
+    background: no-repeat url(resources/img/project_screenshots/pokedex_screenshot.png) center/cover;
+}
+
+#speedgame {
+    background: no-repeat url(resources/img/project_screenshots/nopeustesti_screenshot.png) center/cover;
 }
 
 .project-card:first-child {
