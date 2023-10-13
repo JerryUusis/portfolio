@@ -1,6 +1,11 @@
 :root {
     --jet-color: #333;
-    --dark-blue: #003f6f;
+    --indigo-dye: #003f6f;
+    --mauve: #E2BBF2;
+    --lavender: #7B77D8;
+    --rosewood: #6E1717;
+    --cool-gray: #7b80a6;
+    --celeste: #B1F7FF;
 }
 
 /* font-family: 'Roboto Mono', monospace; */
@@ -78,6 +83,7 @@ li {
 /* Hero */
 
 /* svg is used to create glitchy effect on the page */
+
 svg {
     height: 0;
 }
@@ -92,6 +98,7 @@ section.hero-section {
     position: absolute;
     top: 0;
     left: 0;
+    filter: blur(5px);
     background: url(resources/img/noise.gif);
     width: 100%;
     height: 100%;
@@ -107,16 +114,16 @@ section.hero-section {
     text-align: center;
     font-family: "VCR", sans-serif;
     text-transform: uppercase;
-    color: #fff;
+    color: white;
     padding: 8rem 1rem;
-    filter: url(#wavy);
+    filter: url(#wavy) drop-shadow(0 0 1em black);
+
 }
 
 .hero-section h1 {
     position: relative;
     margin-bottom: 2rem;
-    font-size: 3.5rem;
-    animation: glitch-animation 300ms infinite ease-in-out;
+    font-size: 5rem;
 }
 
 .hero-section h2 {
@@ -154,7 +161,7 @@ h2 span:last-child {
 /* Projects section */
 
 section.projects-section {
-    background: var(--dark-blue);
+    background: var(--indigo-dye);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -231,7 +238,7 @@ section.about-section {
 /* Form section */
 
 section.form-section {
-    background-color: var(--dark-blue);
+    background-color: var(--indigo-dye);
 }
 
 .form-section h2 {
