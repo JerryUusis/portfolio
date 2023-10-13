@@ -24,10 +24,33 @@
     text-align: center;
     font-family: "VCR", sans-serif;
     text-shadow: 
-    -2px -2px 1px #00FF47, 
-    2px 2px 1px #F00, 
-    0px 0px 3px rgba(0, 0, 0, 1);
+        0.10em 0 0 rgba(0, 255, 0, 0.6), 
+        -0.15em -0.05em 0 rgba(255, 0, 0, 0.6), 
+        0 0 1em rgba(0, 0, 0, 1);
     letter-spacing: 3px;
+}
+
+@keyframes glitch-animation {
+    0% {
+        text-shadow: 
+        0.01em -0.0em 0 rgba(0, 255, 0, 0.6), 
+        -0.002em -0.025em 0 rgba(255, 0, 0, 0.6) 
+    }
+    15% {
+        text-shadow: 
+        0.015em -0.005em 0.01em rgba(0, 255, 0, 0.6), 
+        -0.03em 0.01em 0.01em rgba(255, 0, 0, 0.6) 
+    }
+    60% {
+        text-shadow: 
+        0.03em -0.001em 0 rgba(0, 255, 0, 0.6), 
+        0 -0.03em 0 rgba(255, 0, 0, 0.6) 
+    }
+    100% {
+        text-shadow: 
+        0.01em -0.011em 0 rgba(0, 255, 0, 0.6), 
+        0em -0.025em 0.15em rgba(255, 0, 0, 0.6) 
+    }
 }
 
 /* Nav bar */
@@ -54,6 +77,11 @@ li {
 
 /* Hero */
 
+/* svg is used to create glitchy effect on the page */
+svg {
+    height: 0;
+}
+
 section.hero-section {
     background: no-repeat url(resources/img/8bit_helsinki_tuomiokirkko.jpeg)
     center/cover;
@@ -76,11 +104,13 @@ section.hero-section {
     text-transform: uppercase;
     color: #fff;
     padding: 8rem 1rem;
+    filter: url(#wavy)
 }
 
 .hero-section h1 {
     margin-bottom: 2rem;
     font-size: 3.5rem;
+    animation: glitch-animation 250ms infinite ease alternate;
 
 }
 .hero-section h2 {
