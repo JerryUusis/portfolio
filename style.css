@@ -108,11 +108,41 @@ section.hero-section {
 }
 
 .hero-section h1 {
+    position: relative;
     margin-bottom: 2rem;
     font-size: 3.5rem;
-    animation: glitch-animation 250ms infinite ease alternate;
+    animation: glitch-animation 300ms infinite ease-in-out;
 
 }
+
+.hero-section h2 {
+    position: relative;
+    animation: glitch-animation 300ms infinite ease-in-out;
+}
+
+h1 > span,
+h2 > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 span:first-child,
+h2 span:first-child {
+    animation: glitch-animation 500ms infinite linear;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.03em, 0.03em);
+    opacity: 0.4;
+}
+
+h1 span:last-child,
+h2 span:last-child {
+    animation: glitch-animation 700ms infinite alternate;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+    transform: translate(-0.03em, -0.03em);
+    opacity: 0.4;
+}
+
 .hero-section h2 {
     font-size: 3rem;
 }
