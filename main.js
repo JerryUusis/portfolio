@@ -1,4 +1,5 @@
 const projectCards = document.querySelectorAll(".project-card");
+const projectCardsTitle = document.querySelectorAll(".project-card h3");
 const projectTitle = document.querySelector(".project-title");
 const projectDescription = document.querySelector(".project-description");
 
@@ -16,12 +17,12 @@ for (let i = 0; i < projectCards.length; i++) {
 // Make project cards act like radio buttons
 projectCards.forEach(card => {
     card.addEventListener("click", (event) => {
-        projectCards.forEach(card => {
-            card.classList.remove("active");
-            card.classList.add("inactive");
+        projectCards.forEach(otherCard => {
+            otherCard.classList.remove("active");
+            otherCard.classList.add("inactive");
         })
-        event.target.classList.add("active");
-        event.target.classList.remove("inactive");
+        event.currentTarget.classList.add("active");
+        event.currentTarget.classList.remove("inactive");
         updateProjectInfo(event);
     })
 })
