@@ -247,10 +247,6 @@ section.projects-section {
     width: 85%;
 }
 
-section h2 {
-
-}
-
 .section-text-container h3 {
     padding: 1rem 0 2rem;
 }
@@ -362,8 +358,6 @@ button.submit-button {
 
 @media screen and (min-width: 1300px) {
 
-
-
     .project-card {
         min-width: 400px;
         height: 400px;
@@ -371,5 +365,23 @@ button.submit-button {
 
     .project-card h3 {
         font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 2180px) {
+    
+    .projects-carousel {
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        gap: 2%;
+    }
+
+    .project-card:first-child {
+        margin-left: 0;
+    }
+    
+    .project-card:last-child {
+        margin-right: 0;
     }
 }
