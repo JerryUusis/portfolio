@@ -28,10 +28,10 @@ projectCards.forEach(card => {
 })
 
 function updateProjectInfo(event) {
-    if (event.target.id === "pokedex") {
+    if (event.target.id === "pokedex" || event.target.parentElement.id === "pokedex") {
         projectTitle.textContent = "Pokedex";
         projectDescription.textContent = "Pokedex is an application where you can search pokemon from a single generation. First choose a generation you wish to search pokemon from. Then search them with either pokemon type, id or name. Matching search results get displayed immediately."
-    } else if (event.target.id === "speedgame") {
+    } else if (event.target.id === "speedgame" ||  event.target.parentElement.id === "speedgame") {
         projectTitle.textContent = "Speedgame";
         projectDescription.textContent = "In speed game you have to click buttons as they light up. The game gets 5 milliseconds faster with each succesful click. If you click wrong button the game ends and your score will be displayed on the screen. The fourth time you miss a light the game ends and your score will be displayed on the screen."
     } else {
