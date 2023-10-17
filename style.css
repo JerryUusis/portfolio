@@ -23,7 +23,7 @@
 /* Universal styles */
 
 .glitch-style {
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
     text-transform: uppercase;
     color: white;
     text-align: center;
@@ -104,6 +104,12 @@ section.hero-section {
     height: 100%;
     opacity: 0.03;
     z-index: 10;
+}
+
+.hero-section {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-section .text-container {
@@ -227,12 +233,23 @@ section.projects-section {
 .section-text-container {
     font-family: 'Roboto Mono', monospace;
     color: white;
-    padding: 2rem 0;
     width: 85%;
 }
 
+section h2 {
+
+}
+
 .section-text-container h3 {
-    padding: 2rem 0;
+    padding: 1rem 0 2rem;
+}
+
+p {
+    padding: 1rem 0;
+}
+
+p:last-child {
+    margin-bottom: 5rem;
 }
 
 /* About me section */
@@ -314,4 +331,19 @@ button.submit-button {
     padding: 0.5rem;
     align-self: center;
     margin: 1.5rem 0;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 800px) {
+    .text-container,
+    .section-text-container {
+        max-width: 800px;
+
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+    }
 }
