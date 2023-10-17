@@ -350,11 +350,26 @@ button.submit-button {
     .text-container,
     .section-text-container {
         max-width: 800px;
-
     }
 
     .text-container {
         display: flex;
         justify-content: center;
+    }
+
+
+}
+
+@media screen and (min-width: 1300px) {
+
+
+
+    .project-card {
+        min-width: 400px;
+        height: 400px;
+    }
+
+    .project-card h3 {
+        font-size: 2rem;
     }
 }
