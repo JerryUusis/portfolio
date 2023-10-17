@@ -188,6 +188,51 @@ h2 span:last-child {
     font-size: 3rem;
 }
 
+/* Skills section */
+
+section.skills-section {
+    background: var(--mauve);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-section-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.skill-card-container {
+    display: flex;
+    padding: 2rem 0;
+    width: 100%;
+    align-items: space-evenly;
+    overflow: scroll;
+    gap: 2%;
+}
+
+.skill-card:first-child {
+    margin-left: 7.5%;
+}
+.skill-card:last-child {
+    margin-right: 7.5%;
+}
+
+.skill-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 250px;
+    height: 250px;
+    font-family: "VCR", sans-serif;
+    text-transform: uppercase;
+    border: 5px solid #000;
+    background: #FFF;
+}
+
+
 /* Projects section */
 
 section.projects-section {

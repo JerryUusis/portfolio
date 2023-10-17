@@ -10,10 +10,10 @@
 </head>
 
 <body>
-
+    <!-- Header section -->
     <header class="header-section">
         <nav>
-            <ol>
+            <ol class="hidden">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,6 +23,7 @@
         </nav>
     </header>
 
+    <!-- Hero section -->
     <section class="hero-section glitch-style">
         <div class="noise-filter"></div>
         <div class="text-container hidden">
@@ -44,11 +45,40 @@
         </div>
     </section>
 
-    <section class="" id="skills">
-        <h2 class="glitch-style">Skills</h2>
-        
+    <!-- Skills section -->
+    <section class="skills-section" id="skills">
+        <div class="skills-section-container hidden">
+            <h2 class="glitch-style">Skills</h2>
+            <div class="skill-card-container">
+                <div class="skill-card">
+                    <h3 class="skill-name">JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">CSS3</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">Java</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">Python</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">Figma</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">Git & GitHub</h3>
+                </div>
+                <div class="skill-card">
+                    <h3 class="skill-name">Teaching</h3>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Projects section -->
     <section class="projects-section projects-text-section" id="projects">
         <h2 class="glitch-style hidden">Projects</h2>
         <div class="projects-carousel hidden">
@@ -76,6 +106,7 @@
         </div>
     </section>
 
+    <!-- About section -->
     <section class="about-section" id="about">
         <h2 class="glitch-style hidden">About</h2>
         <div class="section-text-container hidden">
@@ -88,22 +119,23 @@
         </div>
     </section>
 
+    <!-- Form section -->
     <section class="form-section" id="contact">
         <form action="" class="hidden">
-                <h2 class="glitch-style">Contact</h2>
-                <div class="label-container">
-                    <label for="name-field">Your name</label>
-                    <input type="text" id="name-field">
-                </div>
-                <div class="label-container">
-                    <label for="email-field">Your email</label>
-                    <input type="text" id="email-field">
-                </div>
-                <div class="label-container">
-                    <label for="message-field">Message</label>
-                    <textarea name="" cols="30" rows="10" id="message-field"></textarea>
-                </div>
-                <button class=submit-button>Send message</button>
+            <h2 class="glitch-style">Contact</h2>
+            <div class="label-container">
+                <label for="name-field">Your name</label>
+                <input type="text" id="name-field">
+            </div>
+            <div class="label-container">
+                <label for="email-field">Your email</label>
+                <input type="text" id="email-field">
+            </div>
+            <div class="label-container">
+                <label for="message-field">Message</label>
+                <textarea name="" cols="30" rows="10" id="message-field"></textarea>
+            </div>
+            <button class=submit-button>Send message</button>
             <script src="main.js"></script>
         </form>
     </section>
