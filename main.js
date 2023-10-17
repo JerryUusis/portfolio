@@ -38,3 +38,15 @@ function updateProjectInfo(event) {
         projectDescription.textContent = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae placeat porro nulla! Perspiciatis cum tempora minima est non, deserunt odio vitae, neque laboriosam facilis nostrum exercitationem vel labore provident dolor."
     }
 }
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    }))
+}
+)
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((element) => observer.observe(element));
