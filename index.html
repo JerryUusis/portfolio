@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Jerry Uusitalo</title>
 </head>
+
 <body>
-    
+
     <header class="header-section">
         <nav>
             <ol>
@@ -21,35 +23,35 @@
     </header>
 
 
-        <section class="hero-section glitch-style">
-            <div class="noise-filter"></div>
-            <div class="text-container">
-                <svg>
-                    <filter id="wavy">
-                        <feTurbulence type="turbulence" baseFrequency="0.003" numOctaves ="10">
-                        </feTurbulence>
-                        <feDisplacementMap in="SourceGraphic" scale="7"></feDisplacementMap>
-                    </filter>
-                </svg>
-                <h1>Yo I'm Jerry!
-                    <span aria-hidden="true">Yo I'm Jerry!</span>
-                    <span aria-hidden="true">Yo I'm Jerry!</span>
-                </h1>
-                <h2>Welcome to my portfolio
-                    <span aria-hidden="true">Welcome to my portfolio</span>
-                    <span aria-hidden="true">Welcome to my portfolio</span>
-                </h2>
-            </div>
-        </section>
+    <section class="hero-section glitch-style">
+        <div class="noise-filter"></div>
+        <div class="text-container hidden">
+            <svg>
+                <filter id="wavy">
+                    <feTurbulence type="turbulence" baseFrequency="0.003" numOctaves="10">
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" scale="7"></feDisplacementMap>
+                </filter>
+            </svg>
+            <h1>Yo I'm Jerry!
+                <span aria-hidden="true">Yo I'm Jerry!</span>
+                <span aria-hidden="true">Yo I'm Jerry!</span>
+            </h1>
+            <h2>Welcome to my portfolio
+                <span aria-hidden="true">Welcome to my portfolio</span>
+                <span aria-hidden="true">Welcome to my portfolio</span>
+            </h2>
+        </div>
+    </section>
 
-    <section class="projects-section projects-text-sectiio">
-        <h2 class="glitch-style">Projects</h2>
-        <div class="projects-carousel">
-            <div class="project-card">
-                <h3>Project name</h3>
+    <section class="projects-section projects-text-section">
+        <h2 class="glitch-style hidden">Projects</h2>
+        <div class="projects-carousel hidden">
+            <div class="project-card" id="pokedex">
+                <h3>pokedex</h3>
             </div>
-            <div class="project-card">
-                <h3>Project name</h3>
+            <div class="project-card" id="speedgame">
+                <h3>Speedgame</h3>
             </div>
             <div class="project-card">
                 <h3>Project name</h3>
@@ -61,42 +63,46 @@
                 <h3>Project name</h3>
             </div>
         </div>
-        <div class="section-text-container">
+        <div class="section-text-container hidden">
             <h3 class="project-title">Project title</h3>
-            <p class="project-description">This project was sick! It took me many hours to figure out how it’s done.Here it is anyway. You got to check it. It’s way too sick to not to check it out. You can check the code in GitHub.</p>
+            <p class="project-description">This project was sick! It took me many hours to figure out how it’s done.Here
+                it is anyway. You got to check it. It’s way too sick to not to check it out. You can check the code in
+                GitHub.</p>
         </div>
     </section>
+
     <section class="about-section">
-    </section>
-    
-    <section class="about-section">
-        <h2 class="glitch-style">About</h2>
-        <div class="section-text-container">
-            <h3>Yo I’m Jerry Uusitalo! I’m a web developer and musician.<h3>
-            <p>I’ve been dabbing with programming since 2022 and currently studying in Business College Helsinki full stack development program.</p>
-            <p>My other passion in life is  music. I’ve been working as a freelance musician since 2012.</p>
-            <p>I draw inspiration from many sources such as music, cinema, nature, history and old school video games.</p>
+        <h2 class="glitch-style hidden">About</h2>
+        <div class="section-text-container hidden">
+            <h3>Yo I’m Jerry Uusitalo! I’m a web developer and musician.</h3>
+            <p>I’ve been dabbing with programming since 2022 and currently studying in Business College Helsinki full
+                stack development program.</p>
+            <p>My other passion in life is music. I’ve been working as a freelance musician since 2012.</p>
+            <p>I draw inspiration from many sources such as music, cinema, nature, history and old school video games.
+            </p>
         </div>
     </section>
 
     <section class="form-section">
-        <form action="">
-            <h2 class="glitch-style">Contact</h2>
-            <div class="label-container">
-                <label for="">Your name</label>
-                <input type="text">
-            </div>
-            <div class="label-container">
-                <label for="">Your email</label>
-                <input type="text">
-            </div>
-            <div class="label-container">
-                <label for="">Message</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-            <button class=submit-button>Send message</button>
+        <form action="" class="hidden">
+                <h2 class="glitch-style">Contact</h2>
+                <div class="label-container">
+                    <label for="name-field">Your name</label>
+                    <input type="text" id="name-field">
+                </div>
+                <div class="label-container">
+                    <label for="email-field">Your email</label>
+                    <input type="text" id="email-field">
+                </div>
+                <div class="label-container">
+                    <label for="message-field">Message</label>
+                    <textarea name="" cols="30" rows="10" id="message-field"></textarea>
+                </div>
+                <button class=submit-button>Send message</button>
+            <script src="main.js"></script>
         </form>
     </section>
 
 </body>
+
 </html>

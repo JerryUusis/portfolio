@@ -23,7 +23,7 @@
 /* Universal styles */
 
 .glitch-style {
-    padding: 2rem 0;
+    padding: 3rem 0 2rem;
     text-transform: uppercase;
     color: white;
     text-align: center;
@@ -56,6 +56,17 @@
         0.01em -0.011em 0 rgba(0, 255, 0, 0.6), 
         0em -0.025em 0.15em rgba(255, 0, 0, 0.6) 
     }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: ease-in-out 750ms;
+}
+
+.show {
+    filter: blur(0);
+    opacity: 1;
 }
 
 /* Nav bar */
@@ -104,6 +115,12 @@ section.hero-section {
     height: 100%;
     opacity: 0.03;
     z-index: 10;
+}
+
+.hero-section {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-section .text-container {
@@ -169,18 +186,17 @@ section.projects-section {
 }
 
 .projects-carousel {
-    padding: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 85%;
+    padding: 2rem 0;
+    width: 100%;
+    align-items: space-evenly;
     overflow: scroll;
-    gap: 2rem;
+    gap: 2%;
 }
 
 .project-card h3 {
     display: flex;
+    border-top: black solid 5px;
     background-color: #999;
     justify-content: center;
     width: 100%;
@@ -190,24 +206,57 @@ section.projects-section {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    min-width: 200px;
-    height: 200px;
+    min-width: 250px;
+    height: 250px;
     font-family: "VCR", sans-serif;
     text-transform: uppercase;
     border: 5px solid #000;
-    opacity: 0.5;
     background: #FFF;
+}
+
+.project-card.active {
+    opacity: 1;
+    transition: 200ms ease-in-out;
+}
+
+.project-card.inactive {
+    opacity: 0.5;
+}
+
+/* Project thumbnails */
+
+#pokedex {
+    background: no-repeat url(resources/img/project_screenshots/pokedex_screenshot.png) center/cover;
+}
+
+#speedgame {
+    background: no-repeat url(resources/img/project_screenshots/nopeustesti_screenshot.png) center/cover;
+}
+
+.project-card:first-child {
+    margin-left: 7.5%;
+}
+
+.project-card:last-child {
+    margin-right: 7.5%;
 }
 
 .section-text-container {
     font-family: 'Roboto Mono', monospace;
     color: white;
-    padding: 2rem 0;
     width: 85%;
 }
 
 .section-text-container h3 {
-    padding: 2rem 0;
+    padding: 1rem 0 2rem;
+}
+
+p {
+    padding: 1rem 0;
+}
+
+p:last-child {
+    margin-bottom: 5rem;
 }
 
 /* About me section */
@@ -289,4 +338,50 @@ button.submit-button {
     padding: 0.5rem;
     align-self: center;
     margin: 1.5rem 0;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 800px) {
+    .text-container,
+    .section-text-container {
+        max-width: 800px;
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
+
+@media screen and (min-width: 1300px) {
+
+    .project-card {
+        min-width: 400px;
+        height: 400px;
+    }
+
+    .project-card h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 2180px) {
+    
+    .projects-carousel {
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        gap: 2%;
+    }
+
+    .project-card:first-child {
+        margin-left: 0;
+    }
+    
+    .project-card:last-child {
+        margin-right: 0;
+    }
 }
