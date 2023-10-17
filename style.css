@@ -58,6 +58,17 @@
     }
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: ease-in-out 750ms;
+}
+
+.show {
+    filter: blur(0);
+    opacity: 1;
+}
+
 /* Nav bar */
 
 header nav {
