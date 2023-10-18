@@ -457,6 +457,7 @@ section.about-section {
 /* Form section */
 
 section.form-section {
+    border-radius: none;
     background-color: var(--indigo-dye);
 }
 
@@ -473,6 +474,7 @@ section.form-section {
 }
 
 form {
+    
     font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
@@ -481,7 +483,7 @@ form {
 
 .label-container {
     margin: 1.5rem;
-    vertical-align: center;
+    text-align: center;
 }
 
 label {
@@ -504,7 +506,9 @@ textarea {
 }
 
 button.submit-button {
+    border-radius: inherit;
     font-family: inherit;
+    border: 1px solid var(--jet-color);
     padding: 0.5rem;
     align-self: center;
     margin: 1.5rem 0;
@@ -548,6 +552,11 @@ button.submit-button {
     .toggle-button {
         display: none;
     }
+
+    .label-container {
+    margin: 1.5rem;
+    vertical-align: center;
+}
     
 }
 
