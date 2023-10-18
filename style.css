@@ -12,6 +12,10 @@
     --active_hover_and_transition: 200ms ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* font-family: 'Roboto Mono', monospace; */
 @font-face {
     font-family: "VCR";
@@ -246,12 +250,40 @@ section.skills-section {
     height: 100%;
 }
 
+.skill-list-item:first-child {
+    transition-delay: 500ms;
+}
+.skill-list-item:nth-child(2) {
+    transition-delay: 750ms;
+}
+.skill-list-item:nth-child(3) {
+    transition-delay: 1000ms;
+}
+.skill-list-item:nth-child(4) {
+    transition-delay: 1250ms;
+}
+
+.skill-card-container:nth-child(2) .skill-list-item:first-child {
+    transition-delay: 1500ms;
+}
+.skill-card-container:nth-child(2) .skill-list-item:nth-child(2) {
+    transition-delay: 1750ms;
+}
+.skill-card-container:nth-child(2) .skill-list-item:nth-child(3) {
+    transition-delay: 2000ms;
+}
+
+.skill-card-container:nth-child(2) .skill-list-item:nth-child(4) {
+    transition-delay: 2250ms;
+}
+
 #javascript {
     width: 60%;
 }
 
 #html {
     width: 80%;
+    transition-delay: 175ms;
 }
 
 #css {
