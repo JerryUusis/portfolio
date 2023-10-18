@@ -76,10 +76,6 @@ html {
     opacity: 1;
 }
 
-body {
-
-}
-
 /* Nav bar */
 
 nav {
@@ -146,6 +142,59 @@ li a:hover {
     background-color: var(--celeste);
 }
 
+section.gallery-section {
+    display: flex;
+    justify-content: center;
+}
+.gallery-section .main-container {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "VCR", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    filter: url(#wavy) drop-shadow(0 0 1em black);
+}
+
+.gallery-section h1,
+h1 span {
+    position: relative;
+    padding: 2rem 0;
+    font-size: 5rem;
+}
+
+.gallery-section h2,
+h2 span {
+    position: relative;
+    padding: 2rem 0;
+}
+
+h1 > span,
+h2 > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 span:first-child,
+h2 span:first-child {
+    animation: glitch-animation 500ms infinite linear;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.03em, 0.03em);
+    opacity: 0.4;
+}
+
+h1 span:last-child,
+h2 span:last-child {
+    animation: glitch-animation 700ms infinite alternate;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+    transform: translate(-0.03em, -0.03em);
+    opacity: 0.4;
+}
+
 /* svg is used to create glitchy effect on the page */
 
 svg {
@@ -154,12 +203,13 @@ svg {
 }
 
 .noise-container {
+    overflow: hidden;
     z-index: -2;
     position: absolute;
     top: -50px;
     left: -50px;
-    width: calc(100% + 50px);
-    height: calc(100% + 50px);
+    width: calc(150% + 50px);
+    height: calc(150% + 50px);
     background: repeating-linear-gradient(var(--jet-color), var(--jet-color) 50%, var(--celeste) 50%, var(--celeste));
     background-size: cover;
     background-size: 5px 5px;
@@ -175,8 +225,6 @@ svg {
     z-index: 2;
 }
 
-
-
 .noise-filter {
     position: absolute;
     top: 0;
@@ -189,7 +237,65 @@ svg {
     z-index: 10;
 }
 
+.gallery-image-container {
+    border: 5px black solid;
+    display: grid;
+    width: 100%;
 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.grid-item {
+    background-color: var(--cherry-chopstick);
+    border: var(--sunset-violet) 3px solid;
+    padding: 20% 0;
+}
+
+.item-1 {
+    grid-row: 1 / 6;
+    grid-column: 1 / 4;
+}
+
+.item-2 {
+    grid-row: 6 / 13;
+    grid-column: 1 / 6;
+}
+
+.item-3 {
+    grid-row: 1 / 6;
+    grid-column: 4 / 6;
+}
+
+.item-4 {
+    grid-row: 1 / 6;
+    grid-column: 6 / 10;
+}
+
+.item-5 {
+    grid-row: 6 / 13;
+    grid-column: 6 / 10;
+}
+
+.item-6 {
+    grid-row: 1 / 6;
+    grid-column: 10 / 13;
+}
+
+.item-7 {
+    grid-row: 6 / 9;
+    grid-column: 10 / 13;
+}
+
+.item-8 {
+    grid-row: 9 / 11;
+    grid-column: 10 / 13;
+}
+
+.item-9 {
+    grid-column: 10 / 13;
+    grid-row: 11 / 13;
+}
 /* Media queries */
 
 @media screen and (min-width: 600px) {
@@ -244,31 +350,10 @@ svg {
 }
 
 @media screen and (min-width: 1300px) {
-
-    .project-card {
-        min-width: 400px;
-        height: 400px;
-    }
-
-    .project-card h3 {
-        font-size: 2rem;
-    }
+    
 }
 
 @media screen and (min-width: 2180px) {
     
-    .projects-carousel {
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        gap: 2%;
-    }
 
-    .project-card:first-child {
-        margin-left: 0;
-    }
-    
-    .project-card:last-child {
-        margin-right: 0;
-    }
 }
