@@ -156,7 +156,6 @@ section.gallery-section {
     font-family: "VCR", sans-serif;
     text-transform: uppercase;
     color: white;
-    filter: url(#wavy) drop-shadow(0 0 1em black);
 }
 
 .gallery-section h1,
@@ -242,7 +241,7 @@ svg {
     border: 5px var(--deep-blue) solid;
     display: grid;
     width: 100%;
-
+    max-width: 1380px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
