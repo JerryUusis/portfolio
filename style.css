@@ -163,7 +163,7 @@ section.hero-section {
     top: 0;
     left: 0;
     filter: blur(5px);
-    background: url(resources/img/noise.gif);
+    background: url(resources/img/noise_compressed.gif);
     width: 100%;
     height: 100%;
     opacity: 0.03;
