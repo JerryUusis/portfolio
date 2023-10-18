@@ -526,7 +526,7 @@ button.submit-button {
 @media screen and (min-width: 600px) {
 
     .noise-filter {
-        display: flex;
+        display: block;
     }
 
     header nav {
