@@ -210,10 +210,11 @@ svg {
     left: -50px;
     width: calc(100% + 50px);
     height: calc(100% + 50px);
-    background: repeating-linear-gradient(var(--jet-color), var(--jet-color) 50%, var(--celeste) 50%, var(--celeste));
+    background: repeating-linear-gradient(var(--lavender), var(--lavender) 50%, var(--cherry-chopstick) 50%, var(--cherry-chopstick));
     background-size: cover;
     background-size: 5px 5px;
-    filter: url(#noise);
+    filter: url(#noise)
+    blur(3px);
     opacity: 1;
 }
 
@@ -238,7 +239,7 @@ svg {
 }
 
 .gallery-image-container {
-    border: 5px black solid;
+    border: 5px var(--deep-blue) solid;
     display: grid;
     width: 100%;
 
@@ -248,7 +249,7 @@ svg {
 
 .grid-item {
     background-color: var(--cherry-chopstick);
-    border: var(--sunset-violet) 3px solid;
+    border: var(--indigo-dye) 3px solid;
     padding: 20% 0;
 }
 
