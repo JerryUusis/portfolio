@@ -271,6 +271,7 @@ section.skills-section {
     display: inline-block;
     font-family: "VCR", sans-serif;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .skill-list-item {
