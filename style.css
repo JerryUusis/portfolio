@@ -474,7 +474,6 @@ section.form-section {
 }
 
 form {
-    
     font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
@@ -492,6 +491,7 @@ label {
     display: inline-block;
     font-size: 1.125rem;
     width: 150px;
+    margin-bottom: 1rem;
 }
 
 label + textarea {
