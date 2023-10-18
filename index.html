@@ -10,19 +10,25 @@
 </head>
 
 <body>
-
+    <!-- Header section -->
     <header class="header-section">
         <nav>
-            <ol>
-                <li>Projects</li>
-                <li>About</li>
-                <li>Gallery</li>
-                <li>Contact</li>
-            </ol>
+            <ul class="navbar-links hidden">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
         </nav>
     </header>
 
-
+    <!-- Hero section -->
     <section class="hero-section glitch-style">
         <div class="noise-filter"></div>
         <div class="text-container hidden">
@@ -44,9 +50,10 @@
         </div>
     </section>
 
-    <section class="projects-section projects-text-section">
+    <!-- Projects section -->
+    <section class="projects-section projects-text-section" id="projects">
         <h2 class="glitch-style hidden">Projects</h2>
-        <div class="projects-carousel hidden">
+        <div class="projects-carousel">
             <div class="project-card" id="pokedex">
                 <h3>pokedex</h3>
             </div>
@@ -71,7 +78,69 @@
         </div>
     </section>
 
-    <section class="about-section">
+    <!-- Skills section -->
+    <section class="skills-section" id="skills">
+        <h2 class="glitch-style">Skills</h2>
+        <div class="skills-section-container">
+            <div class="skill-card-container">
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="javascript"></div>
+                    </div>
+                    <h3 class="skill-name">JavaScript</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="html"></div>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="css"></div>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="java"></div>
+                    </div>
+                    <h3 class="skill-name">Java</h3>
+                </div>
+            </div>
+
+            <div class="skill-card-container">
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="python"></div>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="figma"></div>
+                    </div>
+                    <h3 class="skill-name">Figma</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="git"></div>
+                    </div>
+                    <h3 class="skill-name">Git & GitHub</h3>
+                </div>
+                <div class="skill-list-item hidden">
+                    <div class="skill-bar">
+                        <div class="skill-level" id="teaching"></div>
+                    </div>
+                    <h3 class="skill-name">Teaching</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about-section" id="about">
         <h2 class="glitch-style hidden">About</h2>
         <div class="section-text-container hidden">
             <h3>Yo I’m Jerry Uusitalo! I’m a web developer and musician.</h3>
@@ -83,22 +152,23 @@
         </div>
     </section>
 
-    <section class="form-section">
+    <!-- Form section -->
+    <section class="form-section" id="contact">
         <form action="" class="hidden">
-                <h2 class="glitch-style">Contact</h2>
-                <div class="label-container">
-                    <label for="name-field">Your name</label>
-                    <input type="text" id="name-field">
-                </div>
-                <div class="label-container">
-                    <label for="email-field">Your email</label>
-                    <input type="text" id="email-field">
-                </div>
-                <div class="label-container">
-                    <label for="message-field">Message</label>
-                    <textarea name="" cols="30" rows="10" id="message-field"></textarea>
-                </div>
-                <button class=submit-button>Send message</button>
+            <h2 class="glitch-style">Contact</h2>
+            <div class="label-container">
+                <label for="name-field">Your name</label>
+                <input type="text" id="name-field">
+            </div>
+            <div class="label-container">
+                <label for="email-field">Your email</label>
+                <input type="text" id="email-field">
+            </div>
+            <div class="label-container">
+                <label for="message-field">Message</label>
+                <textarea name="" cols="30" rows="10" id="message-field"></textarea>
+            </div>
+            <button class=submit-button>Send message</button>
             <script src="main.js"></script>
         </form>
     </section>

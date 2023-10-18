@@ -1,7 +1,13 @@
+const toggleButton = document.querySelector(".toggle-button");
+const navbarLinks = document.querySelector(".navbar-links");
 const projectCards = document.querySelectorAll(".project-card");
 const projectCardsTitle = document.querySelectorAll(".project-card h3");
 const projectTitle = document.querySelector(".project-title");
 const projectDescription = document.querySelector(".project-description");
+
+toggleButton.addEventListener("click", () => {
+        navbarLinks.classList.toggle("visible")
+})
 
 // Set first project card as active and others as inactive. Update project info and title.
 for (let i = 0; i < projectCards.length; i++) {
