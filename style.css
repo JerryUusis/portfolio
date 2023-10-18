@@ -80,8 +80,7 @@ html {
 
 nav {
     min-height: 3rem;
-    display: column;
-    align-items: flex-start;
+
 }
 
 header nav {
@@ -130,7 +129,7 @@ li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 35px;
     height: 21px;
     position: absolute;
     top: 0.75rem;

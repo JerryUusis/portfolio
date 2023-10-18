@@ -6,7 +6,7 @@ const projectTitle = document.querySelector(".project-title");
 const projectDescription = document.querySelector(".project-description");
 
 toggleButton.addEventListener("click", () => {
-    navbarLinks.classList.toggle("visible")
+        navbarLinks.classList.toggle("visible")
 })
 
 // Set first project card as active and others as inactive. Update project info and title.
