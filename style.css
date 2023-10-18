@@ -159,6 +159,7 @@ section.hero-section {
 }
 
 .noise-filter {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -523,6 +524,11 @@ button.submit-button {
 /* Media queries */
 
 @media screen and (min-width: 600px) {
+
+    .noise-filter {
+        display: flex;
+    }
+
     header nav {
         min-height: 3rem;
         display: flex;
