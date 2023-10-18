@@ -253,46 +253,55 @@ svg {
 }
 
 .item-1 {
+    background: no-repeat url(resources/img/8bit_helsinki.jpeg) center/cover;
     grid-row: 1 / 6;
     grid-column: 1 / 4;
 }
 
 .item-2 {
+    background: no-repeat url(resources/img/8bit_helsinki_tower.jpeg) center/cover;
     grid-row: 6 / 13;
     grid-column: 1 / 6;
 }
 
 .item-3 {
+    background: no-repeat url(resources/img/8bit_helsinki_beam_from_sky.jpeg) center/cover;
     grid-row: 1 / 6;
     grid-column: 4 / 6;
 }
 
 .item-4 {
+    background: no-repeat url(resources/img/8bit_helsinki_docs.jpeg) center/cover;
     grid-row: 1 / 6;
     grid-column: 6 / 10;
 }
 
 .item-5 {
+    background: no-repeat url(resources/img/8bit_Helsinki_kauppatori.jpeg) center/cover;
     grid-row: 6 / 13;
     grid-column: 6 / 10;
 }
 
 .item-6 {
+    background: no-repeat url(resources/img/8bit_helsinki_ruoholahti.jpeg) center/cover;
     grid-row: 1 / 6;
     grid-column: 10 / 13;
 }
 
 .item-7 {
+    background: no-repeat url(resources/img/8bit_helsinki_snow_on_rooftops.jpeg) center/cover;
     grid-row: 6 / 9;
     grid-column: 10 / 13;
 }
 
 .item-8 {
+    background: no-repeat url(resources/img/8bit_helsinki_tuomiokirkko.jpeg) center/cover;
     grid-row: 9 / 11;
     grid-column: 10 / 13;
 }
 
 .item-9 {
+    background: no-repeat url(resources/img/8bit_uspenskin_katedraali.jpeg) center/cover;
     grid-column: 10 / 13;
     grid-row: 11 / 13;
 }
