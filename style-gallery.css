@@ -1,0 +1,376 @@
+:root {
+    --jet-color: #333;
+    --indigo-dye: #003f6f;
+    --mauve: #E2BBF2;
+    --deep-blue: #091728;
+    --cherry-chopstick: #f29599;
+    --sunset-violet: #9a4d9a;
+    --lavender: #7B77D8;
+    --rosewood: #6E1717;
+    --cool-gray: #7b80a6;
+    --celeste: #B1F7FF;
+    --active_hover_and_transition: 200ms ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* font-family: 'Roboto Mono', monospace; */
+@font-face {
+    font-family: "VCR";
+    src: url(resources/fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Universal styles */
+
+.glitch-style {
+    padding: 3rem 0 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    font-family: "VCR", sans-serif;
+    text-shadow: 
+        0.10em 0 0 rgba(0, 255, 0, 0.6), 
+        -0.15em -0.05em 0 rgba(255, 0, 0, 0.6);
+    letter-spacing: 3px;
+}
+
+@keyframes glitch-animation {
+    0% {
+        text-shadow: 
+        0.01em -0.0em 0 rgba(0, 255, 0, 0.6), 
+        -0.002em -0.025em 0 rgba(255, 0, 0, 0.6) 
+    }
+    15% {
+        text-shadow: 
+        0.015em -0.005em 0.01em rgba(0, 255, 0, 0.6), 
+        -0.03em 0.01em 0.01em rgba(255, 0, 0, 0.6) 
+    }
+    60% {
+        text-shadow: 
+        0.03em -0.001em 0 rgba(0, 255, 0, 0.6), 
+        0 -0.03em 0 rgba(255, 0, 0, 0.6) 
+    }
+    100% {
+        text-shadow: 
+        0.01em -0.011em 0 rgba(0, 255, 0, 0.6), 
+        0em -0.025em 0.15em rgba(255, 0, 0, 0.6) 
+    }
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: ease-in-out 750ms;
+}
+
+.show {
+    filter: blur(0);
+    opacity: 1;
+}
+
+/* Nav bar */
+
+nav {
+    min-height: 3rem;
+}
+
+header nav {
+    display: flex; 
+    justify-content: center;
+    font-family: "VCR";
+    text-transform: uppercase;
+    background-color: var(--indigo-dye);
+    color: white;
+}
+
+nav ul {
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+}
+
+.navbar-links {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+}
+
+.navbar-links.visible {
+    display: flex;
+}
+
+li {
+    padding: 0.75rem 0;
+    font-size: 1.5rem;
+    color: var(--celeste);
+}
+
+li a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--active_hover_and_transition);
+}
+
+li a:hover {
+    color: var(--mauve);
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 21px;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background-color: none;
+}
+
+.toggle-button .bar {
+    height: 5px;
+    width: 100%;
+    background-color: var(--celeste);
+}
+
+section.gallery-section {
+    display: flex;
+    justify-content: center;
+}
+.gallery-section .main-container {
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "VCR", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    filter: url(#wavy) drop-shadow(0 0 1em black);
+}
+
+.gallery-section h1,
+h1 span {
+    position: relative;
+    padding: 2rem 0;
+    font-size: 5rem;
+}
+
+.gallery-section h2,
+h2 span {
+    position: relative;
+    padding: 2rem 0;
+}
+
+h1 > span,
+h2 > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 span:first-child,
+h2 span:first-child {
+    animation: glitch-animation 500ms infinite linear;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.03em, 0.03em);
+    opacity: 0.4;
+}
+
+h1 span:last-child,
+h2 span:last-child {
+    animation: glitch-animation 700ms infinite alternate;
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+    transform: translate(-0.03em, -0.03em);
+    opacity: 0.4;
+}
+
+/* svg is used to create glitchy effect on the page */
+
+svg {
+    height: 0;
+    width: 0;
+}
+
+.noise-container {
+    overflow: hidden;
+    z-index: -2;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
+    background: repeating-linear-gradient(var(--lavender), var(--lavender) 50%, var(--cherry-chopstick) 50%, var(--cherry-chopstick));
+    background-size: cover;
+    background-size: 5px 5px;
+    filter: url(#noise)
+    blur(3px);
+    opacity: 1;
+}
+
+.noise-container {
+    display: flex;
+}
+
+.noise-container h1 {
+    z-index: 2;
+}
+
+.noise-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    background: url(resources/img/noise.gif);
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 10;
+}
+
+.gallery-image-container {
+    border: 5px var(--deep-blue) solid;
+    display: grid;
+    width: 100%;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.grid-item {
+    background-color: var(--cherry-chopstick);
+    border: var(--indigo-dye) 3px solid;
+    padding: 20% 0;
+}
+
+.item-1 {
+    background: no-repeat url(resources/img/8bit_helsinki.jpeg) center/cover;
+    grid-row: 1 / 6;
+    grid-column: 1 / 4;
+}
+
+.item-2 {
+    background: no-repeat url(resources/img/8bit_helsinki_tower.jpeg) center/cover;
+    grid-row: 6 / 13;
+    grid-column: 1 / 6;
+}
+
+.item-3 {
+    background: no-repeat url(resources/img/8bit_helsinki_beam_from_sky.jpeg) center/cover;
+    grid-row: 1 / 6;
+    grid-column: 4 / 6;
+}
+
+.item-4 {
+    background: no-repeat url(resources/img/8bit_helsinki_docs.jpeg) center/cover;
+    grid-row: 1 / 6;
+    grid-column: 6 / 10;
+}
+
+.item-5 {
+    background: no-repeat url(resources/img/8bit_Helsinki_kauppatori.jpeg) center/cover;
+    grid-row: 6 / 13;
+    grid-column: 6 / 10;
+}
+
+.item-6 {
+    background: no-repeat url(resources/img/8bit_helsinki_ruoholahti.jpeg) center/cover;
+    grid-row: 1 / 6;
+    grid-column: 10 / 13;
+}
+
+.item-7 {
+    background: no-repeat url(resources/img/8bit_helsinki_snow_on_rooftops.jpeg) center/cover;
+    grid-row: 6 / 9;
+    grid-column: 10 / 13;
+}
+
+.item-8 {
+    background: no-repeat url(resources/img/8bit_helsinki_tuomiokirkko.jpeg) center/cover;
+    grid-row: 9 / 11;
+    grid-column: 10 / 13;
+}
+
+.item-9 {
+    background: no-repeat url(resources/img/8bit_uspenskin_katedraali.jpeg) center/cover;
+    grid-column: 10 / 13;
+    grid-row: 11 / 13;
+}
+/* Media queries */
+@media screen and (max-width: 600px) {
+    
+}
+
+@media screen and (min-width: 600px) {
+    header nav {
+        min-height: 3rem;
+        display: flex;
+        justify-content: center;
+        font-family: "VCR";
+        text-transform: uppercase;
+        background-color: var(--indigo-dye);
+        color: white;
+    }
+    
+    .navbar-links {
+        display: flex;
+        flex-direction: row;
+        align-items: space-around;
+    }
+    
+    .navbar-links.visible {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    li {
+        padding: 0.75rem 0;
+        font-size: 1.5rem;
+        color: var(--celeste);
+    }
+    
+    li a {
+        color: inherit;
+        text-decoration: none;
+        transition: var(--active_hover_and_transition);
+    }
+
+    .toggle-button {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .text-container,
+    .section-text-container {
+        max-width: 800px;
+    }
+
+    .text-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    
+}
+
+@media screen and (min-width: 2180px) {
+    
+
+}
