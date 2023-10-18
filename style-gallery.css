@@ -208,8 +208,8 @@ svg {
     position: absolute;
     top: -50px;
     left: -50px;
-    width: calc(150% + 50px);
-    height: calc(150% + 50px);
+    width: calc(100% + 50px);
+    height: calc(100% + 50px);
     background: repeating-linear-gradient(var(--jet-color), var(--jet-color) 50%, var(--celeste) 50%, var(--celeste));
     background-size: cover;
     background-size: 5px 5px;
@@ -306,6 +306,9 @@ svg {
     grid-row: 11 / 13;
 }
 /* Media queries */
+@media screen and (max-width: 600px) {
+    
+}
 
 @media screen and (min-width: 600px) {
     header nav {
@@ -326,6 +329,10 @@ svg {
     
     .navbar-links.visible {
         display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
     }
     
     li {
